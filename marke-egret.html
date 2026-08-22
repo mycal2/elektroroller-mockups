@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Egret E-Scooter — Premium E-Mobilität aus Hamburg | elektroroller.de</title>
+<meta name="description" content="Alle Egret E-Scooter bei elektroroller.de: GT-Serie, X-Serie, Ey!-Serie und Unit. Premium-Qualität aus Hamburg mit deutschlandweitem Servicenetz.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { 900: '#0F172A', 800: '#1E293B', 700: '#334155' },
+          emerald: { 500: '#00C853', 600: '#00B84C', 700: '#2E7D32' },
+          brand: { blue: '#0D47A1', yellow: '#FFCC02' },
+        },
+        fontFamily: {
+          sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .card { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.1); }
+  .badge { font-size: 10px; letter-spacing: 1.2px; }
+  .hero-gradient {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2C2C2C 40%, #3a3a3a 100%);
+  }
+  .series-divider {
+    display: flex; align-items: center; gap: 16px;
+  }
+  .series-divider::after {
+    content: ''; flex: 1; height: 1px; background: #E2E8F0;
+  }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Top bar (elektroroller.de global)                      -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="bg-navy-900 text-white text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <div class="flex gap-4">
+      <span>Kostenloser Versand ab 500 €</span>
+      <span class="hidden sm:inline text-slate-400">|</span>
+      <span class="hidden sm:inline">14 Tage Widerrufsrecht</span>
+    </div>
+    <div class="flex gap-3 text-slate-400">
+      <a href="#" class="hover:text-white">Konto</a>
+      <a href="#" class="hover:text-white">Warenkorb (0)</a>
+    </div>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-7 h-7 rounded bg-navy-900 flex items-center justify-center">
+        <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/></svg>
+      </div>
+      <span class="font-bold text-navy-900">elektroroller.de</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+      <a href="#" class="hover:text-navy-900">E-Scooter</a>
+      <a href="#" class="hover:text-navy-900">Elektroroller</a>
+      <a href="#" class="hover:text-navy-900">Seniorenmobile</a>
+      <a href="#" class="hover:text-navy-900 font-semibold text-navy-900">Marken</a>
+      <a href="#" class="hover:text-navy-900">Ratgeber</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Hero Banner                                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="hero-gradient text-white">
+  <div class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <!-- Left: Brand info -->
+      <div>
+        <!-- Egret Logo -->
+        <div class="mb-6">
+          <svg width="140" height="22" viewBox="0 0 166 27" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" fill="white" fill-rule="evenodd">
+              <g transform="translate(-44,-1306)"><g transform="translate(40,1302)"><rect x="0" y="0" width="175" height="35" fill="none"/><g transform="translate(4,4)">
+                <g transform="translate(48.36,0)"><path d="M22.48,3.83C21.42,4.85 20.36,5.86 19.28,6.9C19.16,6.8 18.99,6.67 18.82,6.53C15.94,4.26 11.97,3.89 8.95,5.65C5.77,7.5 4.49,10.66 4.78,14.02C4.91,15.47 5.37,16.81 6.19,18.02C7.71,20.26 9.81,21.52 12.52,21.62C14.69,21.71 16.69,21.16 18.49,19.93C18.8,19.72 18.96,19.5 18.95,19.1C18.92,17.85 18.94,16.6 18.94,15.27C18.2,15.24 17.48,15.26 16.77,15.25C16.05,15.25 15.33,15.25 14.61,15.25L12.46,15.25C12.31,14.75 12.3,11.74 12.44,11.19L23.4,11.19C23.41,11.39 23.44,11.56 23.44,11.74C23.44,14.8 23.44,17.87 23.45,20.93C23.45,21.28 23.33,21.53 23.1,21.78C20.75,24.24 17.88,25.59 14.51,25.92C12.66,26.1 10.82,26.06 9.05,25.44C4.13,23.71 0.98,20.29 0.23,15.09C-0.88,7.43 4.03,1.44 10.86,0.31C15.04,-0.38 18.8,0.72 22.1,3.4C22.19,3.47 22.28,3.55 22.37,3.64C22.4,3.66 22.41,3.7 22.48,3.83"/></g>
+                <path d="M0,4.55L0,0.17C0.44,0.05 41.46,0 42.3,0.13L42.3,4.55L0,4.55Z"/>
+                <g transform="translate(127.23,0)"><path d="M38.45,0.13L38.45,4.46C38.01,4.59 0.81,4.63 0.01,4.5L0.01,0.16C0.4,0.03 37.73,-0.01 38.45,0.13"/></g>
+                <path d="M83.23,12.93C83.32,12.95 83.4,12.99 83.47,12.99C85.05,12.99 86.64,13.03 88.22,12.98C89.87,12.92 91.22,11.71 91.6,10.07C91.75,9.42 91.76,8.75 91.65,8.09C91.35,6.29 89.81,4.91 88.07,4.9C86.64,4.9 85.21,4.9 83.78,4.9C83.6,4.9 83.42,4.92 83.23,4.94L83.23,12.93ZM91.73,16.01C93.64,19.32 95.53,22.6 97.47,25.95C97.23,25.98 97.08,26 96.93,26C95.64,26 94.34,25.98 93.04,26.01C92.66,26.02 92.46,25.87 92.27,25.53C90.79,22.88 89.28,20.24 87.8,17.58C87.59,17.19 87.37,17 86.9,17.03C85.88,17.08 84.85,17.05 83.83,17.05C83.64,17.06 83.45,17.07 83.21,17.08L83.21,25.89C82.74,26.03 79.48,26.05 78.87,25.92L78.87,0.8C78.99,0.79 79.08,0.77 79.17,0.77C82.23,0.77 85.29,0.75 88.34,0.79C89.63,0.81 90.87,1.14 92.03,1.74C94.27,2.89 95.53,4.8 95.93,7.34C96.19,8.93 96.09,10.49 95.47,11.98C94.79,13.62 93.69,14.86 92.2,15.72C92.05,15.81 91.91,15.9 91.73,16.01Z"/>
+                <path d="M109.39,4.93L109.39,10.67L120.41,10.67C120.54,11.13 120.58,13.84 120.46,14.69L109.39,14.69L109.39,21.74C109.99,21.78 110.61,21.75 111.23,21.76C111.83,21.76 112.44,21.76 113.04,21.76L114.92,21.76L116.74,21.76L118.61,21.76L120.41,21.76C120.53,22.22 120.57,25.06 120.47,25.89C120.05,26.01 106.15,26.06 105.03,25.95C104.9,25.53 104.86,1.71 104.99,0.77L120.51,0.77C120.52,2.13 120.52,3.49 120.51,4.93L109.39,4.93Z"/>
+                <path d="M26.78,25.25L26.78,9.95L42.3,9.95C42.42,10.35 42.45,13.07 42.34,13.92L31.28,13.92C31.14,14.45 31.13,20.4 31.26,21.03L42.36,21.03L42.36,25.25L26.78,25.25Z"/>
+                <polygon points="133.18 25.25 137.64 25.25 137.64 9.95 133.18 9.95"/>
+              </g></g></g>
+            </g>
+          </svg>
+        </div>
+
+        <p class="text-xs tracking-[3px] uppercase mb-4" style="color:#888;">Premium-Partner bei elektroroller.de</p>
+
+        <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
+          E-Mobilität auf<br>höchstem Niveau
+        </h1>
+
+        <p class="text-slate-300 text-base leading-relaxed mb-6 max-w-md">
+          Hochwertige, langlebige E-Scooter aus Hamburg mit deutschlandweitem Servicenetz. Von Einsteiger bis Premium — alle Modelle mit Straßenzulassung.
+        </p>
+
+        <!-- Trust badges -->
+        <div class="flex flex-wrap gap-4 text-xs text-slate-400">
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span>Qualität aus Hamburg</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            <span>4,4/5 Google (242)</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>14 Modelle</span>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a href="#modelle" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors">
+            Alle Modelle ansehen
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Hero image -->
+      <div class="hidden md:flex justify-center">
+        <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs E-Scooter" class="max-h-[420px] object-contain drop-shadow-2xl">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Price range bar                                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4 text-sm">
+    <div class="flex items-center gap-6">
+      <span class="text-slate-500">Preise von</span>
+      <span class="font-bold text-lg text-navy-900">279 € – 2.199 €</span>
+    </div>
+    <div class="flex items-center gap-4 text-slate-500">
+      <span class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        Bestellbar
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        Sale
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+        Nicht verfügbar
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Product Grid                                           -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<main id="modelle" class="max-w-7xl mx-auto px-4 py-12">
+
+  <!-- ── GT-Serie (Premium) ───────────────────────────── -->
+  <div class="series-divider mb-8">
+    <div>
+      <h2 class="text-xl font-bold text-navy-900">GT-Serie</h2>
+      <p class="text-slate-500 text-sm">Premium-Klasse mit Vollfederung und Wechselakku</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+
+    <!-- GTs -->
+    <a href="pdp-egret-gt-premium-banner-left.html" class="card block bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-navy-900 text-white text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Flagship</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold text-lg mb-1">Egret GTs</h3>
+        <p class="text-slate-500 text-xs mb-3">45 km/h · Vollfederung · 13" Luftreifen · Wechselakku</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 65 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="text-slate-400 text-xs">Akku</span>
+          <span class="font-semibold text-sm">949 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <span class="text-xl font-bold text-navy-900">2.199 €</span>
+          <span class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bestellbar
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <!-- GTc -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTc" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Neu</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold text-lg mb-1">Egret GTc</h3>
+        <p class="text-slate-500 text-xs mb-3">20 km/h · Mit Sitz · Vollfederung · 13" Luftreifen</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 100 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="text-slate-400 text-xs">Akku</span>
+          <span class="font-semibold text-sm">48 V</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <span class="text-xl font-bold text-navy-900">2.199 €</span>
+          <span class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bestellbar
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GT -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/97/7c/4e/1785234005/egret gt quer.webp" alt="Egret GT" class="max-h-full object-contain">
+        </div>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold text-lg mb-1">Egret GT</h3>
+        <p class="text-slate-500 text-xs mb-3">20 km/h · Vollfederung · 13" Luftreifen · Wechselakku</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 100 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="text-slate-400 text-xs">Akku</span>
+          <span class="font-semibold text-sm">949 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <span class="text-xl font-bold text-navy-900">1.899 €</span>
+          <span class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bestellbar
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── X-Serie (Alltag) ────────────────────────────── -->
+  <div class="series-divider mb-8">
+    <div>
+      <h2 class="text-xl font-bold text-navy-900">X-Serie</h2>
+      <p class="text-slate-500 text-sm">Allrounder für Alltag und Pendeln</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+    <!-- X ultra -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="Egret X ultra" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret X ultra</h3>
+        <p class="text-slate-500 text-xs mb-3">Frontfederung · 12,5" Luftreifen</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 90 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">865 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">1.099 €</span>
+            <span class="text-lg font-bold text-emerald-600">999 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- X prime -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="Egret X prime" class="max-h-full object-contain">
+        </div>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret X prime</h3>
+        <p class="text-slate-500 text-xs mb-3">Frontfederung · 12,5" Luftreifen</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 65 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">649 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <span class="text-lg font-bold text-navy-900">899 €</span>
+          <span class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bestellbar
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- X core+ -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/5a/56/e7/1782131906/egret%20x%20core%20sideview_(1).jpg" alt="Egret X core+" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret X core+</h3>
+        <p class="text-slate-500 text-xs mb-3">Frontfederung · Blinker vorne</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 55 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">499 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">849 €</span>
+            <span class="text-lg font-bold text-emerald-600">549 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- X core -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/5a/56/e7/1782131906/egret%20x%20core%20sideview_(1).jpg" alt="Egret X core" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret X core</h3>
+        <p class="text-slate-500 text-xs mb-3">Frontfederung · Blinker vorne</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 55 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">499 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">799 €</span>
+            <span class="text-lg font-bold text-emerald-600">499 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Unit ─────────────────────────────────────────── -->
+  <div class="series-divider mb-8">
+    <div>
+      <h2 class="text-xl font-bold text-navy-900">Unit</h2>
+      <p class="text-slate-500 text-sm">Vollfederung und Langstrecke</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+    <!-- Unit 20 km/h -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden opacity-75">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/53/f3/7b/1783327422/egret unit hero_(1).webp" alt="Egret Unit" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-slate-200 text-slate-600 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Ausverkauft</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret Unit</h3>
+        <p class="text-slate-500 text-xs mb-3">20 km/h · eKFV · Vollfederung</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 100 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">730 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <span class="text-lg font-bold text-slate-400">799 €</span>
+          <span class="flex items-center gap-1 text-slate-400 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Nicht verfügbar
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit 25 km/h -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/53/f3/7b/1783327422/egret unit hero_(1).webp" alt="Egret Unit Int" class="max-h-full object-contain">
+        </div>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret Unit (Int)</h3>
+        <p class="text-slate-500 text-xs mb-3">25 km/h · Ohne Straßenzulassung DE</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 100 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">730 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <span class="text-lg font-bold text-navy-900">799 €</span>
+          <span class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bestellbar
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Ey!-Serie (Einsteiger) ───────────────────────── -->
+  <div class="series-divider mb-8">
+    <div>
+      <h2 class="text-xl font-bold text-navy-900">Ey!-Serie</h2>
+      <p class="text-slate-500 text-sm">Einsteigermodelle — leicht, faltbar, erschwinglich</p>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+
+    <!-- Ey! 2 -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 2" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret Ey! 2</h3>
+        <p class="text-slate-500 text-xs mb-3">Vollfederung · Faltbar · 23,4 kg</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 45 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">446 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">899 €</span>
+            <span class="text-lg font-bold text-emerald-600">399 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ey! 6 -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 6" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret Ey! 6</h3>
+        <p class="text-slate-500 text-xs mb-3">Frontfederung · Faltbar · 21,6 kg</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 55 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">551 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">799 €</span>
+            <span class="text-lg font-bold text-emerald-600">399 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ey! S -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/8c/4f/07/1762351159/Ey%20S%207%20hero%20image.png" alt="Egret Ey! S" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret Ey! S</h3>
+        <p class="text-slate-500 text-xs mb-3">Bosch Motor · Apple Find My · 18,5 kg</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 30 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">275 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">499 €</span>
+            <span class="text-lg font-bold text-emerald-600">279 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ey! 3 -->
+    <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden opacity-75">
+      <div class="relative">
+        <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
+          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 3" class="max-h-full object-contain">
+        </div>
+        <span class="absolute top-3 left-3 bg-slate-200 text-slate-600 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Ausverkauft</span>
+      </div>
+      <div class="p-4 border-t border-slate-100">
+        <h3 class="font-bold mb-1">Egret Ey! 3</h3>
+        <p class="text-slate-500 text-xs mb-3">Vollfederung · Faltbar · 18,6 kg</p>
+        <div class="flex items-baseline gap-2 mb-2">
+          <span class="text-slate-400 text-xs">Reichweite</span>
+          <span class="font-semibold text-sm">≤ 30 km</span>
+          <span class="text-slate-300 mx-1">·</span>
+          <span class="font-semibold text-sm">275 Wh</span>
+        </div>
+        <div class="flex items-center justify-between mt-3 pt-3 border-t border-slate-100">
+          <div>
+            <span class="text-slate-400 text-sm line-through mr-2">679 €</span>
+            <span class="text-lg font-bold text-slate-400">299 €</span>
+          </div>
+          <span class="flex items-center gap-1 text-slate-400 text-xs font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span> Nicht verfügbar
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Verkäufer-Info (DSA)                                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <div class="flex flex-wrap items-center justify-between gap-4 text-sm text-slate-500">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:#2C2C2C;">
+          <svg width="50" height="8" viewBox="0 0 166 27" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" fill="white" fill-rule="evenodd">
+              <g transform="translate(-44,-1306)"><g transform="translate(40,1302)"><rect x="0" y="0" width="175" height="35" fill="none"/><g transform="translate(4,4)">
+                <g transform="translate(48.36,0)"><path d="M22.48,3.83C21.42,4.85 20.36,5.86 19.28,6.9C19.16,6.8 18.99,6.67 18.82,6.53C15.94,4.26 11.97,3.89 8.95,5.65C5.77,7.5 4.49,10.66 4.78,14.02C4.91,15.47 5.37,16.81 6.19,18.02C7.71,20.26 9.81,21.52 12.52,21.62C14.69,21.71 16.69,21.16 18.49,19.93C18.8,19.72 18.96,19.5 18.95,19.1C18.92,17.85 18.94,16.6 18.94,15.27C18.2,15.24 17.48,15.26 16.77,15.25C16.05,15.25 15.33,15.25 14.61,15.25L12.46,15.25C12.31,14.75 12.3,11.74 12.44,11.19L23.4,11.19C23.41,11.39 23.44,11.56 23.44,11.74C23.44,14.8 23.44,17.87 23.45,20.93C23.45,21.28 23.33,21.53 23.1,21.78C20.75,24.24 17.88,25.59 14.51,25.92C12.66,26.1 10.82,26.06 9.05,25.44C4.13,23.71 0.98,20.29 0.23,15.09C-0.88,7.43 4.03,1.44 10.86,0.31C15.04,-0.38 18.8,0.72 22.1,3.4C22.19,3.47 22.28,3.55 22.37,3.64C22.4,3.66 22.41,3.7 22.48,3.83"/></g>
+                <path d="M0,4.55L0,0.17C0.44,0.05 41.46,0 42.3,0.13L42.3,4.55L0,4.55Z"/>
+                <g transform="translate(127.23,0)"><path d="M38.45,0.13L38.45,4.46C38.01,4.59 0.81,4.63 0.01,4.5L0.01,0.16C0.4,0.03 37.73,-0.01 38.45,0.13"/></g>
+                <path d="M83.23,12.93C83.32,12.95 83.4,12.99 83.47,12.99C85.05,12.99 86.64,13.03 88.22,12.98C89.87,12.92 91.22,11.71 91.6,10.07C91.75,9.42 91.76,8.75 91.65,8.09C91.35,6.29 89.81,4.91 88.07,4.9C86.64,4.9 85.21,4.9 83.78,4.9C83.6,4.9 83.42,4.92 83.23,4.94L83.23,12.93ZM91.73,16.01C93.64,19.32 95.53,22.6 97.47,25.95C97.23,25.98 97.08,26 96.93,26C95.64,26 94.34,25.98 93.04,26.01C92.66,26.02 92.46,25.87 92.27,25.53C90.79,22.88 89.28,20.24 87.8,17.58C87.59,17.19 87.37,17 86.9,17.03C85.88,17.08 84.85,17.05 83.83,17.05C83.64,17.06 83.45,17.07 83.21,17.08L83.21,25.89C82.74,26.03 79.48,26.05 78.87,25.92L78.87,0.8C78.99,0.79 79.08,0.77 79.17,0.77C82.23,0.77 85.29,0.75 88.34,0.79C89.63,0.81 90.87,1.14 92.03,1.74C94.27,2.89 95.53,4.8 95.93,7.34C96.19,8.93 96.09,10.49 95.47,11.98C94.79,13.62 93.69,14.86 92.2,15.72C92.05,15.81 91.91,15.9 91.73,16.01Z"/>
+                <path d="M109.39,4.93L109.39,10.67L120.41,10.67C120.54,11.13 120.58,13.84 120.46,14.69L109.39,14.69L109.39,21.74C109.99,21.78 110.61,21.75 111.23,21.76C111.83,21.76 112.44,21.76 113.04,21.76L114.92,21.76L116.74,21.76L118.61,21.76L120.41,21.76C120.53,22.22 120.57,25.06 120.47,25.89C120.05,26.01 106.15,26.06 105.03,25.95C104.9,25.53 104.86,1.71 104.99,0.77L120.51,0.77C120.52,2.13 120.52,3.49 120.51,4.93L109.39,4.93Z"/>
+                <path d="M26.78,25.25L26.78,9.95L42.3,9.95C42.42,10.35 42.45,13.07 42.34,13.92L31.28,13.92C31.14,14.45 31.13,20.4 31.26,21.03L42.36,21.03L42.36,25.25L26.78,25.25Z"/>
+                <polygon points="133.18 25.25 137.64 25.25 137.64 9.95 133.18 9.95"/>
+              </g></g></g>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <span class="text-slate-700 font-medium">Verkäufer: Walberg Urban Electrics GmbH</span>
+          <span class="text-slate-400 mx-2">·</span>
+          <a href="#" class="hover:text-navy-900 underline">AGB</a>
+          <span class="text-slate-300 mx-1">|</span>
+          <a href="#" class="hover:text-navy-900 underline">Datenschutz</a>
+          <span class="text-slate-300 mx-1">|</span>
+          <a href="#" class="hover:text-navy-900 underline">Impressum</a>
+          <span class="text-slate-300 mx-1">|</span>
+          <a href="#" class="hover:text-navy-900 underline">Widerruf</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-navy-900 text-slate-400 text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded bg-navy-800 flex items-center justify-center">
+          <svg class="w-3 h-3 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/></svg>
+        </div>
+        <span>elektroroller.de</span>
+      </div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Impressum</a>
+        <a href="#" class="hover:text-white">Datenschutz</a>
+        <a href="#" class="hover:text-white">AGB</a>
+        <a href="#" class="hover:text-white">Widerruf</a>
+      </div>
+      <span>© 2026 e-Roller GmbH</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
