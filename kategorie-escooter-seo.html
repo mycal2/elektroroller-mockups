@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Scooter kaufen — Kategorie | elektroroller.de</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { 900: '#0F172A', 800: '#1E293B', 700: '#334155' },
+          emerald: { 500: '#00C853', 600: '#00B84C', 700: '#2E7D32' },
+          brand: { blue: '#0D47A1', yellow: '#FFCC02' },
+        },
+        fontFamily: {
+          sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  .card-hover { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+  .faq-toggle:checked + .faq-answer { max-height: 200px; padding-top: 12px; padding-bottom: 16px; }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.25s ease, padding 0.25s ease; }
+  .seo-prose h3 { scroll-margin-top: 80px; }
+  .seo-nav a { transition: color 0.15s; }
+  .seo-nav a:hover { color: #00C853; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+<!-- ═══════ Staging Banner ═══════ -->
+<div class="bg-amber-400 text-navy-900 text-xs text-center py-1.5 font-medium">
+  ⚠ Staging-System — Änderungen wirken sich NICHT auf die Live-Plattform aus.
+</div>
+
+<!-- ═══════ Top Bar ═══════ -->
+<div class="bg-navy-900 text-white text-xs">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+    <div class="flex gap-3 items-center">
+      <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span> Kostenloser Versand</span>
+      <span class="text-slate-500">·</span>
+      <span>✓ 14 Tage Widerrufsrecht</span>
+      <span class="text-slate-500">·</span>
+      <span>★ Top-Marken & Service seit 2019</span>
+    </div>
+    <div class="flex gap-4 items-center">
+      <div class="flex gap-1">
+        <div class="w-6 h-4 bg-blue-700 rounded-sm"></div>
+        <div class="w-6 h-4 bg-red-500 rounded-sm"></div>
+        <div class="w-6 h-4 bg-yellow-400 rounded-sm"></div>
+        <div class="w-6 h-4 bg-purple-600 rounded-sm"></div>
+      </div>
+      <a href="#" class="hover:text-white text-slate-400">So funktioniert's</a>
+      <a href="#" class="hover:text-white text-slate-400">Partner werden</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ Nav ═══════ -->
+<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="h-14 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-navy-900 flex items-center justify-center">
+            <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/></svg>
+          </div>
+          <span class="font-bold text-lg text-navy-900">elektroroller.de</span>
+        </a>
+        <div class="relative flex-1 max-w-lg ml-4">
+          <input type="text" placeholder="Marke, Modell oder Kategorie suchen..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-10 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="text-sm text-slate-600 hover:text-navy-900">Anmelden</a>
+        <a href="#" class="bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold px-4 py-2 rounded-lg">Registrieren</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-6 h-10 text-sm">
+      <a href="#" class="text-navy-900 font-semibold border-b-2 border-emerald-500 pb-2">E-Scooter</a>
+      <a href="#" class="text-slate-500 hover:text-navy-900 pb-2">Elektroroller</a>
+      <a href="#" class="text-slate-500 hover:text-navy-900 pb-2">Seniorenmobile</a>
+      <a href="#" class="text-slate-500 hover:text-navy-900 pb-2">Kabinenroller</a>
+      <div class="flex-1"></div>
+      <a href="#" class="text-slate-500 hover:text-navy-900 flex items-center gap-1 pb-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        Ratgeber
+      </a>
+      <a href="#" class="text-slate-500 hover:text-navy-900 flex items-center gap-1 pb-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Tests
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════ Breadcrumb + Header ═══════ -->
+<div class="bg-white border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4 py-6">
+    <nav class="text-xs text-slate-400 mb-2">
+      <a href="#" class="hover:text-slate-600">Start</a>
+      <span class="mx-1">/</span>
+      <span class="text-slate-600">E-Scooter</span>
+    </nav>
+    <h1 class="text-3xl font-bold text-navy-900 mb-1">E-Scooter</h1>
+    <p class="text-slate-500 text-sm">Leicht, faltbar, mit Straßenzulassung — für die Stadt und den Arbeitsweg.</p>
+  </div>
+</div>
+
+<!-- ═══════ Kategorie-Suche ═══════ -->
+<div class="max-w-7xl mx-auto px-4 mt-6 mb-6">
+  <div class="bg-white rounded-xl border border-slate-200 p-4">
+    <div class="relative">
+      <input type="text" placeholder="Suche in E-Scooter..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-10 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500">
+      <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ Filter + Produktraster ═══════ -->
+<div class="max-w-7xl mx-auto px-4 mb-12">
+  <div class="flex gap-6">
+    <!-- Sidebar Filter -->
+    <aside class="w-56 shrink-0 hidden lg:block">
+      <div class="bg-white rounded-xl border border-slate-200 p-5">
+        <h3 class="font-semibold text-sm mb-4">Filter</h3>
+        <div class="mb-5">
+          <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">Marken</p>
+          <label class="flex items-center gap-2 text-sm mb-2 cursor-pointer"><input type="checkbox" class="rounded border-slate-300"> EGRET</label>
+          <label class="flex items-center gap-2 text-sm mb-2 cursor-pointer"><input type="checkbox" class="rounded border-slate-300"> STREETBOOSTER</label>
+          <label class="flex items-center gap-2 text-sm cursor-pointer"><input type="checkbox" class="rounded border-slate-300"> VMAX</label>
+        </div>
+        <div class="mb-5">
+          <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2">Preis (EUR)</p>
+          <div class="flex gap-2">
+            <input type="text" placeholder="Min" class="w-full bg-slate-50 border border-slate-200 rounded px-2 py-1.5 text-sm">
+            <span class="text-slate-300 self-center">–</span>
+            <input type="text" placeholder="Max" class="w-full bg-slate-50 border border-slate-200 rounded px-2 py-1.5 text-sm">
+          </div>
+        </div>
+        <button class="w-full bg-navy-900 text-white text-sm font-semibold py-2 rounded-lg hover:bg-navy-800">Anwenden</button>
+      </div>
+    </aside>
+
+    <!-- Produktraster -->
+    <div class="flex-1">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-sm text-slate-500">7 Modelle</span>
+        <select class="text-sm border border-slate-200 rounded-lg px-3 py-1.5 bg-white">
+          <option>Beliebt</option>
+          <option>Preis aufsteigend</option>
+          <option>Preis absteigend</option>
+          <option>Neu</option>
+        </select>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Produkt 1 -->
+        <a href="#" class="card-hover bg-white rounded-xl border border-slate-200 overflow-hidden block">
+          <div class="relative p-4 pb-0">
+            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Auf Lager</span>
+            <div class="aspect-square flex items-center justify-center">
+              <img src="https://cdn.my-egret.com/production/media/97/7c/4e/1785234005/egret gt quer.webp" alt="Egret GT Premium" class="max-h-full object-contain">
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-[10px] text-slate-400 tracking-wider uppercase">EGRET</p>
+            <h3 class="font-semibold text-sm mt-0.5">Egret GT Premium E-Scooter</h3>
+            <div class="mt-2">
+              <span class="text-xs text-slate-400 line-through mr-1">UVP 1.899,00 €</span>
+              <div class="flex items-baseline gap-2 mt-0.5">
+                <span class="font-bold text-navy-900">1.429,10 €</span>
+                <span class="text-xs text-emerald-600 font-medium">Sie sparen 169,90 € (11%)</span>
+              </div>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-1">Inkl. MwSt., zzgl. Versand</p>
+          </div>
+        </a>
+
+        <!-- Produkt 2 -->
+        <a href="#" class="card-hover bg-white rounded-xl border border-slate-200 overflow-hidden block">
+          <div class="relative p-4 pb-0">
+            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Auf Lager</span>
+            <div class="aspect-square flex items-center justify-center">
+              <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs" class="max-h-full object-contain">
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-[10px] text-slate-400 tracking-wider uppercase">EGRET</p>
+            <h3 class="font-semibold text-sm mt-0.5">Egret GTs – 45 km/h</h3>
+            <div class="mt-2">
+              <span class="text-xs text-slate-400 line-through mr-1">1.979,10 €</span>
+              <div class="flex items-baseline gap-2 mt-0.5">
+                <span class="font-bold text-navy-900">1.969,10 €</span>
+              </div>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-1">Inkl. MwSt., zzgl. Versand</p>
+          </div>
+        </a>
+
+        <!-- Produkt 3 -->
+        <a href="#" class="card-hover bg-white rounded-xl border border-slate-200 overflow-hidden block">
+          <div class="relative p-4 pb-0">
+            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Auf Lager</span>
+            <span class="absolute top-3 right-3 bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase flex items-center gap-1">🔥 Deal</span>
+            <div class="aspect-square flex items-center justify-center">
+              <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="VMAX VX2 Gear" class="max-h-full object-contain">
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-[10px] text-slate-400 tracking-wider uppercase">VMAX</p>
+            <h3 class="font-semibold text-sm mt-0.5">NEW VX2 GEAR</h3>
+            <div class="mt-2">
+              <span class="text-xs text-slate-400 line-through mr-1">800,00 €</span>
+              <div class="flex items-baseline gap-2 mt-0.5">
+                <span class="font-bold text-navy-900">650,00 €</span>
+              </div>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-1">Inkl. MwSt., zzgl. Versand</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Weitere laden -->
+      <div class="text-center mt-8">
+        <span class="text-sm text-slate-400">7 von 7 Modellen angezeigt</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- FAQ (bestehend)                                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="max-w-7xl mx-auto px-4 mb-12">
+  <h2 class="text-2xl font-bold text-navy-900 mb-2">Häufige Fragen</h2>
+  <p class="text-slate-500 text-sm mb-6">Was du zu E-Scooter wissen solltest.</p>
+
+  <div class="space-y-3">
+    <div class="bg-white rounded-xl border border-slate-200">
+      <label class="flex items-center justify-between p-5 cursor-pointer">
+        <span class="font-medium text-sm">Wer ist mein Vertragspartner?</span>
+        <input type="checkbox" class="faq-toggle hidden peer">
+        <svg class="w-5 h-5 text-slate-400 shrink-0 transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+      </label>
+      <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+        Dein Kaufvertrag kommt direkt mit dem jeweiligen Fachhändler zustande. elektroroller.de vermittelt als Marktplatz und wickelt die Zahlung sicher ab.
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-slate-200">
+      <label class="flex items-center justify-between p-5 cursor-pointer">
+        <span class="font-medium text-sm">Wie verfolge ich meine Sendung?</span>
+        <input type="checkbox" class="faq-toggle hidden peer">
+        <svg class="w-5 h-5 text-slate-400 shrink-0 transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+      </label>
+      <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+        Nach dem Versand erhältst du eine E-Mail mit Tracking-Link. Den aktuellen Status siehst du jederzeit in deinem Kundenkonto.
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-slate-200">
+      <label class="flex items-center justify-between p-5 cursor-pointer">
+        <span class="font-medium text-sm">Wie funktioniert eine Rücksendung?</span>
+        <input type="checkbox" class="faq-toggle hidden peer">
+        <svg class="w-5 h-5 text-slate-400 shrink-0 transition-transform peer-checked:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+      </label>
+      <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+        Du hast 14 Tage Widerrufsrecht. Über dein Kundenkonto kannst du die Rücksendung starten. Der Händler organisiert die Abholung.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TRUST-BADGES (bestehend)                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="max-w-7xl mx-auto px-4 mb-12">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="bg-white rounded-xl border border-slate-200 p-5 text-center">
+      <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center mx-auto mb-3">
+        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Zentraler Support bei Fragen oder Problemen</h3>
+      <p class="text-slate-500 text-xs">Alles an einem Ort — du kommunizierst mit dem Partner direkt über elektroroller.de.</p>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-5 text-center">
+      <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-3">
+        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Einheitlicher Widerrufs- und Retourenprozess</h3>
+      <p class="text-slate-500 text-xs">Klare, plattformweite Spielregeln für Rücksendungen und Erstattungen.</p>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-5 text-center">
+      <div class="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center mx-auto mb-3">
+        <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Geprüfte Partner und Hersteller</h3>
+      <p class="text-slate-500 text-xs">Jeder Partner wird vorab geprüft und muss Qualitätsstandards einhalten.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- NEU: SEO-KATEGORIETEXT                                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="max-w-7xl mx-auto px-4 mb-16">
+  <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+
+    <!-- Anker-Navigation -->
+    <nav class="seo-nav border-b border-slate-100 px-6 py-3 flex gap-5 overflow-x-auto text-xs text-slate-500 font-medium">
+      <a href="#einfuehrung">Einführung</a>
+      <a href="#technik">Technische Kriterien</a>
+      <a href="#recht">Rechtliches</a>
+      <a href="#nutzung">Nutzungsprofile</a>
+      <a href="#empfehlungen">Kaufempfehlungen</a>
+      <a href="#fazit">Fazit</a>
+    </nav>
+
+    <!-- Inhalt -->
+    <div class="seo-prose p-6 md:p-10 lg:px-16 lg:py-12">
+
+      <h2 class="text-2xl font-bold text-navy-900 mb-8">Kaufberatung für E-Scooter</h2>
+
+      <!-- Einführung -->
+      <div id="einfuehrung" class="mb-10">
+        <h3 class="text-lg font-semibold text-navy-900 mb-3">Was ist ein E-Scooter?</h3>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Ein E-Scooter ist ein elektrisch angetriebener Tretroller mit Straßenzulassung. In Deutschland dürfen zugelassene Modelle maximal 20 km/h fahren und brauchen eine Versicherungsplakette. E-Scooter eignen sich für kurze bis mittlere Strecken in der Stadt: den Weg zur Arbeit, zum Einkaufen oder als Ergänzung zum ÖPNV. Die meisten Modelle lassen sich zusammenklappen und wiegen zwischen 12 und 25 kg. Reichweiten liegen je nach Akku zwischen 30 und 100 km. Wer einen wendigen, leisen und wartungsarmen Begleiter für den Alltag sucht, findet im E-Scooter eine praktische Alternative zu Auto oder Fahrrad.
+        </p>
+      </div>
+
+      <!-- Technische Kriterien -->
+      <div id="technik" class="mb-10">
+        <h3 class="text-lg font-semibold text-navy-900 mb-3">Worauf du beim Kauf achten solltest</h3>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+          Reichweite und Akkukapazität sind die wichtigsten Unterscheidungsmerkmale. Die Hersteller geben Maximalwerte unter Idealbedingungen an — in der Praxis rechne mit 60–80 % davon. Ein Akku mit 500 Wh schafft in der Regel 40–50 km im Alltag, mit 900 Wh kommst du auf 70–80 km. Der Akku bestimmt auch das Gewicht: Mehr Kapazität heißt mehr Kilogramm.
+        </p>
+        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+          Die Motorleistung liegt bei den meisten Modellen zwischen 250 und 500 Watt Nenndauerleistung. Für flaches Gelände reichen 250 W, bei Steigungen oder höherem Körpergewicht sollten es 350 W oder mehr sein. Bremsen sind ein Sicherheitsthema: Scheibenbremsen vorne und hinten gelten als Standard bei hochwertigen Modellen. Trommelbremsen sind wartungsärmer, aber weniger griffig bei Nässe.
+        </p>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Federung macht vor allem auf schlechtem Untergrund einen Unterschied. Modelle mit Vorder- und Hinterfederung (Vollfederung) sind komfortabler, aber schwerer. Luftreifen bieten besseren Grip und Komfort als Vollgummireifen, brauchen aber gelegentlich Luft und können platt werden. Ein guter Kompromiss sind pannensichere Luftreifen mit 10 Zoll Durchmesser.
+        </p>
+      </div>
+
+      <!-- Rechtliche Hinweise -->
+      <div id="recht" class="mb-10">
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-100">
+          <h3 class="text-lg font-semibold text-navy-900 mb-3 flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+            Rechtliche Hinweise
+          </h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">
+            E-Scooter mit Straßenzulassung (eKFV) brauchen in Deutschland eine Allgemeine Betriebserlaubnis (ABE) und ein Versicherungskennzeichen. Die Versicherung kostet etwa 30–60 € pro Jahr. Einen Führerschein brauchst du nicht, das Mindestalter liegt bei 14 Jahren.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed mb-3">
+            Eine Helmpflicht gibt es aktuell nicht, ein Helm wird aber dringend empfohlen. Gefahren werden darf auf Radwegen und Radfahrstreifen, ersatzweise auf der Fahrbahn. Gehwege und Fußgängerzonen sind tabu.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Alle E-Scooter auf elektroroller.de haben eine gültige ABE für deutsche Straßen. Im
+            <a href="#" class="text-emerald-600 hover:text-emerald-700 font-medium">Ratgeber zur Straßenzulassung</a>
+            erklären wir die Vorgaben im Detail.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nutzungsprofile -->
+      <div id="nutzung" class="mb-10">
+        <h3 class="text-lg font-semibold text-navy-900 mb-4">Für wen eignet sich welcher E-Scooter?</h3>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+            <p class="font-semibold text-sm mb-1">Pendler</p>
+            <p class="text-slate-600 text-xs leading-relaxed">Wer täglich 5–15 km zur Arbeit fährt, braucht einen Akku mit mindestens 500 Wh und ein Modell, das sich gut tragen lässt (unter 16 kg). Vollfederung lohnt sich bei langen Strecken.</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+            <p class="font-semibold text-sm mb-1">Stadtfahrer</p>
+            <p class="text-slate-600 text-xs leading-relaxed">Kurze Wege, spontan unterwegs. Hier zählen geringes Gewicht und schnelles Falten mehr als Maximalreichweite. Einstiegsmodelle ab 300 Wh reichen.</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+            <p class="font-semibold text-sm mb-1">Freizeitfahrer</p>
+            <p class="text-slate-600 text-xs leading-relaxed">Wochenendtouren, Ausflüge, Urlaub. Reichweite ist wichtiger als Gewicht. Modelle ab 700 Wh schaffen 60–80 km und bieten den nötigen Komfort.</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-4 border border-slate-100">
+            <p class="font-semibold text-sm mb-1">Einsteiger</p>
+            <p class="text-slate-600 text-xs leading-relaxed">Wer erst mal ausprobieren will, fährt mit einem soliden Einstiegsmodell zwischen 300 und 500 € gut. Lieber bei Reichweite sparen als bei Bremsen.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kaufempfehlungen -->
+      <div id="empfehlungen" class="mb-10">
+        <h3 class="text-lg font-semibold text-navy-900 mb-4">Unsere Empfehlungen</h3>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <a href="#" class="block bg-white rounded-xl border border-slate-200 p-4 card-hover">
+            <p class="text-[10px] text-slate-400 uppercase tracking-wide mb-1">Für Pendler</p>
+            <p class="font-semibold text-sm mb-1">Egret X ultra</p>
+            <p class="text-xs text-slate-500 mb-2">865 Wh · bis 90 km · 20 km/h</p>
+            <span class="text-emerald-600 text-sm font-bold">999 €</span>
+          </a>
+          <a href="#" class="block bg-white rounded-xl border border-slate-200 p-4 card-hover">
+            <p class="text-[10px] text-slate-400 uppercase tracking-wide mb-1">Preis-Leistung</p>
+            <p class="font-semibold text-sm mb-1">Egret X core</p>
+            <p class="text-xs text-slate-500 mb-2">499 Wh · bis 55 km · 20 km/h</p>
+            <span class="text-emerald-600 text-sm font-bold">499 €</span>
+          </a>
+          <a href="#" class="block bg-white rounded-xl border border-slate-200 p-4 card-hover">
+            <p class="text-[10px] text-slate-400 uppercase tracking-wide mb-1">Einsteiger</p>
+            <p class="font-semibold text-sm mb-1">Egret Ey! S</p>
+            <p class="text-xs text-slate-500 mb-2">275 Wh · bis 30 km · 20 km/h</p>
+            <span class="text-emerald-600 text-sm font-bold">279 €</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Interne Verlinkung -->
+      <div class="mb-10 flex flex-wrap gap-3">
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm text-emerald-600 hover:text-emerald-700 font-medium bg-emerald-50 px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          E-Scooter Ratgeber
+        </a>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm text-emerald-600 hover:text-emerald-700 font-medium bg-emerald-50 px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          E-Scooter Vergleich 2026
+        </a>
+        <a href="#" class="inline-flex items-center gap-1.5 text-sm text-emerald-600 hover:text-emerald-700 font-medium bg-emerald-50 px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          Top 5 E-Scooter
+        </a>
+      </div>
+
+      <!-- Fazit -->
+      <div id="fazit" class="bg-navy-900 rounded-xl p-6 text-white">
+        <h3 class="text-lg font-semibold mb-3">Sicher kaufen auf elektroroller.de</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Alle E-Scooter in unserem Shop stammen von geprüften Herstellern und Fachhändlern. Du bestellst mit 14 Tagen Widerrufsrecht, sicherer Zahlung und deutschlandweitem Service. Bei Fragen helfen wir dir weiter — vor und nach dem Kauf. Wenn du dir noch unsicher bist, wirf einen Blick in unseren
+          <a href="#" class="text-emerald-400 hover:text-emerald-300 font-medium">E-Scooter Ratgeber</a>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ Footer ═══════ -->
+<footer class="bg-navy-900 text-slate-400">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded bg-navy-800 flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/></svg>
+          </div>
+          <span class="text-white font-bold">elektroroller.de</span>
+        </div>
+        <p class="text-xs leading-relaxed">Der Marktplatz für Elektroroller, E-Scooter, Seniorenmobile und Kabinenroller.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Kategorien</h4>
+        <div class="flex flex-col gap-2 text-xs">
+          <a href="#" class="hover:text-white">E-Scooter</a>
+          <a href="#" class="hover:text-white">Elektroroller</a>
+          <a href="#" class="hover:text-white">Seniorenmobile</a>
+          <a href="#" class="hover:text-white">Kabinenroller</a>
+          <a href="#" class="hover:text-white">Ratgeber</a>
+          <a href="#" class="hover:text-white">Tests</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Rechtliches</h4>
+        <div class="flex flex-col gap-2 text-xs">
+          <a href="#" class="hover:text-white">Partner werden</a>
+          <a href="#" class="hover:text-white">Kontakt</a>
+          <a href="#" class="hover:text-white">Impressum</a>
+          <a href="#" class="hover:text-white">AGB</a>
+          <a href="#" class="hover:text-white">Datenschutzerklärung</a>
+          <a href="#" class="hover:text-white">Widerrufsbelehrung</a>
+          <a href="#" class="hover:text-white">Cookie-Einstellungen</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Bleib auf dem Laufenden</h4>
+        <p class="text-xs mb-3">Tests, Vergleiche, Aktionen — direkt in Ihr Postfach.</p>
+        <div class="flex gap-2">
+          <input type="email" placeholder="ihre@email.de" class="flex-1 bg-navy-800 border border-navy-700 rounded-lg px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-emerald-500">
+          <button class="bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-semibold px-3 py-2 rounded-lg">Anmelden</button>
+        </div>
+        <p class="text-[10px] text-slate-500 mt-2">Mit der Anmeldung akzeptieren Sie unsere <a href="#" class="underline">Datenschutzerklärung</a>. Sie können sich jederzeit abmelden.</p>
+      </div>
+    </div>
+    <div class="border-t border-navy-800 pt-6 flex flex-wrap items-center justify-between gap-4 text-xs">
+      <span>© 2026 e-Roller GmbH. Alle Rechte vorbehalten.</span>
+      <span class="text-slate-500">Made in Deutschland 🇩🇪</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

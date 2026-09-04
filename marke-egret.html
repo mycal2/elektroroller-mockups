@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Egret E-Scooter — Premium E-Mobilität aus Hamburg | elektroroller.de</title>
-<meta name="description" content="Alle Egret E-Scooter bei elektroroller.de: GT-Serie, X-Serie, Ey!-Serie und Unit. Premium-Qualität aus Hamburg mit deutschlandweitem Servicenetz.">
+<title>Egret E-Scooter – Alle 14 Modelle im Vergleich | elektroroller.de</title>
+<meta name="description" content="Alle Egret E-Scooter im Vergleich: GT-Serie, X-Serie, Ey!-Serie und Unit. Preise, Reichweiten, Akkus auf einen Blick. Premium-Qualität aus Hamburg bei elektroroller.de.">
+<link rel="canonical" href="https://elektroroller.de/marken/egret">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -36,12 +37,103 @@
   .series-divider::after {
     content: ''; flex: 1; height: 1px; background: #E2E8F0;
   }
+  .faq-toggle:checked + .faq-answer { max-height: 500px; padding-top: 12px; padding-bottom: 4px; }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+  .faq-label { cursor: pointer; }
+  .faq-label svg { transition: transform 0.2s ease; }
+  .faq-toggle:checked ~ .faq-label svg { transform: rotate(180deg); }
+  /* Compare table zebra */
+  .compare-table tbody tr:nth-child(even) { background: #F8FAFC; }
+  .compare-table th { position: sticky; top: 0; }
 </style>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://elektroroller.de/" },
+    { "@type": "ListItem", "position": 2, "name": "Marken", "item": "https://elektroroller.de/marken" },
+    { "@type": "ListItem", "position": 3, "name": "Egret", "item": "https://elektroroller.de/marken/egret" }
+  ]
+}
+</script>
+
+<!-- JSON-LD: Brand / Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Brand",
+  "name": "Egret",
+  "url": "https://my-egret.com",
+  "description": "Premium E-Scooter aus Hamburg. Egret entwickelt und vertreibt hochwertige E-Scooter mit Straßenzulassung für Pendler, Stadtfahrer und Freizeitnutzer.",
+  "logo": "https://cdn.my-egret.com/production/media/egret-logo.png"
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Haben Egret E-Scooter eine Straßenzulassung in Deutschland?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, alle Egret-Modelle mit dem Zusatz „eKFV" oder „20 km/h" besitzen eine Allgemeine Betriebserlaubnis (ABE) und sind für den deutschen Straßenverkehr zugelassen. Die Modelle mit 25 km/h oder 45 km/h (z. B. GTs) sind für den internationalen Markt bestimmt und in Deutschland nicht im öffentlichen Straßenverkehr erlaubt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wo werden Egret E-Scooter hergestellt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Egret ist eine Hamburger Marke der Walberg Urban Electrics GmbH. Die Entwicklung und das Design finden in Hamburg statt, die Fertigung erfolgt bei spezialisierten Partnern in Asien unter Egrets Qualitätskontrolle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange hält der Akku eines Egret E-Scooters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Akkus der Egret E-Scooter sind für rund 500–800 Ladezyklen ausgelegt. Bei durchschnittlicher Nutzung (3–4 Ladungen pro Woche) entspricht das einer Lebensdauer von ca. 3–5 Jahren, bevor die Kapazität merklich nachlässt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es Ersatzteile und Service für Egret E-Scooter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Egret bietet über ein deutschlandweites Servicenetz Ersatzteile und Reparaturen an. Über elektroroller.de erhältst du Original-Ersatzteile und Zugang zum Egret-Servicenetzwerk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welcher Egret E-Scooter eignet sich für Pendler?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für Pendler mit täglichen Strecken von 5–15 km eignen sich die Modelle der X-Serie (X ultra, X prime) mit 65–90 km Reichweite und Frontfederung. Wer mehr Komfort und Langstrecke braucht, greift zur GT-Serie mit Vollfederung und bis zu 100 km Reichweite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Brauche ich eine Versicherung für meinen Egret E-Scooter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, für alle E-Scooter mit Straßenzulassung (eKFV-Modelle, max. 20 km/h) ist in Deutschland eine Haftpflichtversicherung mit Versicherungskennzeichen Pflicht. Die Kosten liegen bei ca. 20–60 € pro Jahr je nach Anbieter und Deckung."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- Top bar (elektroroller.de global)                      -->
+<!-- Top bar                                                -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <div class="bg-navy-900 text-white text-xs">
   <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
@@ -76,8 +168,17 @@
   </div>
 </nav>
 
+<!-- Breadcrumb -->
+<div class="max-w-7xl mx-auto px-4 py-3 text-xs text-slate-500">
+  <a href="/" class="hover:text-navy-900">Start</a>
+  <span class="mx-1.5">/</span>
+  <a href="/marken" class="hover:text-navy-900">Marken</a>
+  <span class="mx-1.5">/</span>
+  <span class="text-slate-700 font-medium">Egret</span>
+</div>
+
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- Hero Banner                                            -->
+<!-- 1. HERO SECTION                                        -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <section class="hero-gradient text-white">
   <div class="max-w-7xl mx-auto px-4 py-16 md:py-24">
@@ -101,51 +202,45 @@
           </svg>
         </div>
 
-        <p class="text-xs tracking-[3px] uppercase mb-4" style="color:#888;">Premium-Partner bei elektroroller.de</p>
-
         <h1 class="text-3xl md:text-4xl font-bold leading-tight mb-4">
-          E-Mobilität auf<br>höchstem Niveau
+          Egret E-Scooter – Alle 14 Modelle im Vergleich
         </h1>
 
-        <p class="text-slate-300 text-base leading-relaxed mb-6 max-w-md">
-          Hochwertige, langlebige E-Scooter aus Hamburg mit deutschlandweitem Servicenetz. Von Einsteiger bis Premium — alle Modelle mit Straßenzulassung.
+        <p class="text-slate-300 text-base leading-relaxed mb-6 max-w-lg">
+          Egret steht seit 2013 für Premium-E-Scooter aus Hamburg. Entwickelt in Deutschland, gebaut mit hochwertigen Komponenten und einem deutschlandweiten Servicenetz. Von der kompakten Ey!-Serie bis zum vollgefederten GT-Flaggschiff.
         </p>
 
-        <!-- Trust badges -->
-        <div class="flex flex-wrap gap-4 text-xs text-slate-400">
-          <div class="flex items-center gap-1.5">
+        <!-- Quick Badges -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-xs font-medium text-white">
             <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            <span>Qualität aus Hamburg</span>
-          </div>
-          <div class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-            <span>4,4/5 Google (242)</span>
-          </div>
-          <div class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <span>14 Modelle</span>
-          </div>
+            Deutscher Fachhandel-Service
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-xs font-medium text-white">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            100% Original-Ersatzteile
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-xs font-medium text-white">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Garantie & Gewährleistung
+          </span>
         </div>
 
-        <div class="mt-8">
-          <a href="#modelle" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors">
-            Alle Modelle ansehen
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
-          </a>
-        </div>
+        <a href="#modelle" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg text-sm transition-colors">
+          Alle Modelle ansehen
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </a>
       </div>
 
       <!-- Right: Hero image -->
       <div class="hidden md:flex justify-center">
-        <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs E-Scooter" class="max-h-[420px] object-contain drop-shadow-2xl">
+        <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs E-Scooter – Flaggschiff der GT-Serie mit Vollfederung" class="max-h-[420px] object-contain drop-shadow-2xl" loading="eager">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- Price range bar                                        -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- Price range bar -->
 <div class="bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4 text-sm">
     <div class="flex items-center gap-6">
@@ -170,11 +265,11 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- Product Grid                                           -->
+<!-- 2. MODELL-GRIDS                                        -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <main id="modelle" class="max-w-7xl mx-auto px-4 py-12">
 
-  <!-- ── GT-Serie (Premium) ───────────────────────────── -->
+  <!-- GT-Serie (Premium) -->
   <div class="series-divider mb-8">
     <div>
       <h2 class="text-xl font-bold text-navy-900">GT-Serie</h2>
@@ -183,12 +278,11 @@
   </div>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-
     <!-- GTs -->
     <a href="pdp-egret-gt-premium-banner-left.html" class="card block bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTs E-Scooter – Seitenansicht" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-navy-900 text-white text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Flagship</span>
       </div>
@@ -215,7 +309,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTc" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/8d/8e/e6/1774963972/egret-gts-main-image.jpg" alt="Egret GTc E-Scooter mit Sitz" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-blue-600 text-white text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Neu</span>
       </div>
@@ -242,7 +336,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/97/7c/4e/1785234005/egret gt quer.webp" alt="Egret GT" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/97/7c/4e/1785234005/egret gt quer.webp" alt="Egret GT E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
       </div>
       <div class="p-4 border-t border-slate-100">
@@ -265,7 +359,7 @@
     </div>
   </div>
 
-  <!-- ── X-Serie (Alltag) ────────────────────────────── -->
+  <!-- X-Serie (Alltag) -->
   <div class="series-divider mb-8">
     <div>
       <h2 class="text-xl font-bold text-navy-900">X-Serie</h2>
@@ -274,12 +368,11 @@
   </div>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-
     <!-- X ultra -->
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="Egret X ultra" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="Egret X ultra E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
       </div>
@@ -305,7 +398,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="Egret X prime" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/a7/e1/ea/1782130656/x-core-side-angle.webp" alt="Egret X prime E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
       </div>
       <div class="p-4 border-t border-slate-100">
@@ -330,7 +423,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/5a/56/e7/1782131906/egret%20x%20core%20sideview_(1).jpg" alt="Egret X core+" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/5a/56/e7/1782131906/egret%20x%20core%20sideview_(1).jpg" alt="Egret X core+ E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
       </div>
@@ -356,7 +449,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/5a/56/e7/1782131906/egret%20x%20core%20sideview_(1).jpg" alt="Egret X core" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/5a/56/e7/1782131906/egret%20x%20core%20sideview_(1).jpg" alt="Egret X core E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
       </div>
@@ -379,7 +472,7 @@
     </div>
   </div>
 
-  <!-- ── Unit ─────────────────────────────────────────── -->
+  <!-- Unit -->
   <div class="series-divider mb-8">
     <div>
       <h2 class="text-xl font-bold text-navy-900">Unit</h2>
@@ -388,12 +481,11 @@
   </div>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-
     <!-- Unit 20 km/h -->
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden opacity-75">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/53/f3/7b/1783327422/egret unit hero_(1).webp" alt="Egret Unit" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/53/f3/7b/1783327422/egret unit hero_(1).webp" alt="Egret Unit E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-slate-200 text-slate-600 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Ausverkauft</span>
       </div>
@@ -419,7 +511,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/53/f3/7b/1783327422/egret unit hero_(1).webp" alt="Egret Unit Int" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/53/f3/7b/1783327422/egret unit hero_(1).webp" alt="Egret Unit Int E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
       </div>
       <div class="p-4 border-t border-slate-100">
@@ -441,7 +533,7 @@
     </div>
   </div>
 
-  <!-- ── Ey!-Serie (Einsteiger) ───────────────────────── -->
+  <!-- Ey!-Serie (Einsteiger) -->
   <div class="series-divider mb-8">
     <div>
       <h2 class="text-xl font-bold text-navy-900">Ey!-Serie</h2>
@@ -450,12 +542,11 @@
   </div>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-
     <!-- Ey! 2 -->
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 2" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 2 E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
       </div>
@@ -481,7 +572,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 6" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 6 E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
       </div>
@@ -507,7 +598,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/8c/4f/07/1762351159/Ey%20S%207%20hero%20image.png" alt="Egret Ey! S" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/8c/4f/07/1762351159/Ey%20S%207%20hero%20image.png" alt="Egret Ey! S E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-amber-400 text-navy-900 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-bold">Sale</span>
       </div>
@@ -533,7 +624,7 @@
     <div class="card bg-white rounded-xl border border-slate-200 overflow-hidden opacity-75">
       <div class="relative">
         <div class="aspect-[4/3] bg-white flex items-center justify-center p-4">
-          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 3" class="max-h-full object-contain">
+          <img src="https://cdn.my-egret.com/production/media/55/51/13/1721050813/Ey%202%20sideview.webp" alt="Egret Ey! 3 E-Scooter" class="max-h-full object-contain" loading="lazy">
         </div>
         <span class="absolute top-3 left-3 bg-slate-200 text-slate-600 text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full font-semibold">Ausverkauft</span>
       </div>
@@ -560,6 +651,384 @@
   </div>
 
 </main>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 3. MARKEN-VERGLEICHSTABELLE                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="vergleich" class="bg-white border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-navy-900 mb-2">Egret E-Scooter im Vergleich</h2>
+    <p class="text-slate-500 text-sm mb-8">Alle Modelle auf einen Blick — Reichweite, Akku, Preis und Verfügbarkeit.</p>
+
+    <div class="overflow-x-auto rounded-xl border border-slate-200">
+      <table class="compare-table w-full text-sm text-left">
+        <thead>
+          <tr class="bg-navy-900 text-white text-xs uppercase tracking-wider">
+            <th class="px-4 py-3 font-semibold">Modell</th>
+            <th class="px-4 py-3 font-semibold">Serie</th>
+            <th class="px-4 py-3 font-semibold text-right">Reichweite</th>
+            <th class="px-4 py-3 font-semibold text-right">Akku</th>
+            <th class="px-4 py-3 font-semibold text-center">v<sub>max</sub></th>
+            <th class="px-4 py-3 font-semibold">Federung</th>
+            <th class="px-4 py-3 font-semibold text-right">Preis</th>
+            <th class="px-4 py-3 font-semibold text-center">Status</th>
+          </tr>
+        </thead>
+        <tbody class="text-slate-700">
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret GTs</a></td>
+            <td class="px-4 py-3 text-slate-500">GT</td>
+            <td class="px-4 py-3 text-right">≤ 65 km</td>
+            <td class="px-4 py-3 text-right">949 Wh</td>
+            <td class="px-4 py-3 text-center">45 km/h</td>
+            <td class="px-4 py-3">Voll</td>
+            <td class="px-4 py-3 text-right font-semibold">2.199 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-emerald-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Bestellbar</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret GTc</a></td>
+            <td class="px-4 py-3 text-slate-500">GT</td>
+            <td class="px-4 py-3 text-right">≤ 100 km</td>
+            <td class="px-4 py-3 text-right">48 V</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Voll</td>
+            <td class="px-4 py-3 text-right font-semibold">2.199 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-emerald-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Bestellbar</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret GT</a></td>
+            <td class="px-4 py-3 text-slate-500">GT</td>
+            <td class="px-4 py-3 text-right">≤ 100 km</td>
+            <td class="px-4 py-3 text-right">949 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Voll</td>
+            <td class="px-4 py-3 text-right font-semibold">1.899 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-emerald-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Bestellbar</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret X ultra</a></td>
+            <td class="px-4 py-3 text-slate-500">X</td>
+            <td class="px-4 py-3 text-right">≤ 90 km</td>
+            <td class="px-4 py-3 text-right">865 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Front</td>
+            <td class="px-4 py-3 text-right"><span class="text-slate-400 line-through text-xs mr-1">1.099 €</span> <span class="font-semibold text-emerald-600">999 €</span></td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-amber-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Sale</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret X prime</a></td>
+            <td class="px-4 py-3 text-slate-500">X</td>
+            <td class="px-4 py-3 text-right">≤ 65 km</td>
+            <td class="px-4 py-3 text-right">649 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Front</td>
+            <td class="px-4 py-3 text-right font-semibold">899 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-emerald-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Bestellbar</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret X core+</a></td>
+            <td class="px-4 py-3 text-slate-500">X</td>
+            <td class="px-4 py-3 text-right">≤ 55 km</td>
+            <td class="px-4 py-3 text-right">499 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Front</td>
+            <td class="px-4 py-3 text-right"><span class="text-slate-400 line-through text-xs mr-1">849 €</span> <span class="font-semibold text-emerald-600">549 €</span></td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-amber-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Sale</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret X core</a></td>
+            <td class="px-4 py-3 text-slate-500">X</td>
+            <td class="px-4 py-3 text-right">≤ 55 km</td>
+            <td class="px-4 py-3 text-right">499 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Front</td>
+            <td class="px-4 py-3 text-right"><span class="text-slate-400 line-through text-xs mr-1">799 €</span> <span class="font-semibold text-emerald-600">499 €</span></td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-amber-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Sale</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold text-slate-400">Egret Unit</td>
+            <td class="px-4 py-3 text-slate-400">Unit</td>
+            <td class="px-4 py-3 text-right text-slate-400">≤ 100 km</td>
+            <td class="px-4 py-3 text-right text-slate-400">730 Wh</td>
+            <td class="px-4 py-3 text-center text-slate-400">20 km/h</td>
+            <td class="px-4 py-3 text-slate-400">Voll</td>
+            <td class="px-4 py-3 text-right text-slate-400">799 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-slate-400 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>Ausverkauft</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret Unit (Int)</a></td>
+            <td class="px-4 py-3 text-slate-500">Unit</td>
+            <td class="px-4 py-3 text-right">≤ 100 km</td>
+            <td class="px-4 py-3 text-right">730 Wh</td>
+            <td class="px-4 py-3 text-center">25 km/h</td>
+            <td class="px-4 py-3">Voll</td>
+            <td class="px-4 py-3 text-right font-semibold">799 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-emerald-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Bestellbar</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret Ey! 2</a></td>
+            <td class="px-4 py-3 text-slate-500">Ey!</td>
+            <td class="px-4 py-3 text-right">≤ 45 km</td>
+            <td class="px-4 py-3 text-right">446 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Voll</td>
+            <td class="px-4 py-3 text-right"><span class="text-slate-400 line-through text-xs mr-1">899 €</span> <span class="font-semibold text-emerald-600">399 €</span></td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-amber-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Sale</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret Ey! 6</a></td>
+            <td class="px-4 py-3 text-slate-500">Ey!</td>
+            <td class="px-4 py-3 text-right">≤ 55 km</td>
+            <td class="px-4 py-3 text-right">551 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Front</td>
+            <td class="px-4 py-3 text-right"><span class="text-slate-400 line-through text-xs mr-1">799 €</span> <span class="font-semibold text-emerald-600">399 €</span></td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-amber-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Sale</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold"><a href="#" class="text-brand-blue hover:underline">Egret Ey! S</a></td>
+            <td class="px-4 py-3 text-slate-500">Ey!</td>
+            <td class="px-4 py-3 text-right">≤ 30 km</td>
+            <td class="px-4 py-3 text-right">275 Wh</td>
+            <td class="px-4 py-3 text-center">20 km/h</td>
+            <td class="px-4 py-3">Keine</td>
+            <td class="px-4 py-3 text-right"><span class="text-slate-400 line-through text-xs mr-1">499 €</span> <span class="font-semibold text-emerald-600">279 €</span></td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-amber-600 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Sale</span></td>
+          </tr>
+          <tr class="border-t border-slate-100">
+            <td class="px-4 py-3 font-semibold text-slate-400">Egret Ey! 3</td>
+            <td class="px-4 py-3 text-slate-400">Ey!</td>
+            <td class="px-4 py-3 text-right text-slate-400">≤ 30 km</td>
+            <td class="px-4 py-3 text-right text-slate-400">275 Wh</td>
+            <td class="px-4 py-3 text-center text-slate-400">20 km/h</td>
+            <td class="px-4 py-3 text-slate-400">Voll</td>
+            <td class="px-4 py-3 text-right text-slate-400"><span class="line-through text-xs mr-1">679 €</span> 299 €</td>
+            <td class="px-4 py-3 text-center"><span class="inline-flex items-center gap-1 text-slate-400 text-xs"><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>Ausverkauft</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-slate-400 mt-3">Stand: September 2026. Preise inkl. MwSt., zzgl. Versand. Alle Angaben ohne Gewähr.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 4. TRUST-GRIDS                                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="max-w-7xl mx-auto px-4 py-12">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+      <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-50 flex items-center justify-center">
+        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H18.75m-7.5-3V6.375c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v9.75M6 15.75V6.375c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v9.75"/></svg>
+      </div>
+      <h3 class="font-bold text-navy-900 mb-1">Kostenloser Versand</h3>
+      <p class="text-slate-500 text-xs">Ab 500 € Bestellwert versandkostenfrei innerhalb Deutschlands.</p>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+      <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-50 flex items-center justify-center">
+        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182"/></svg>
+      </div>
+      <h3 class="font-bold text-navy-900 mb-1">14 Tage Widerrufsrecht</h3>
+      <p class="text-slate-500 text-xs">Nicht zufrieden? Einfach zurücksenden. Ohne Wenn und Aber.</p>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+      <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-50 flex items-center justify-center">
+        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+      </div>
+      <h3 class="font-bold text-navy-900 mb-1">2 Jahre Garantie</h3>
+      <p class="text-slate-500 text-xs">Alle Egret-Produkte mit voller Herstellergarantie und Gewährleistung.</p>
+    </div>
+    <div class="bg-white rounded-xl border border-slate-200 p-6 text-center">
+      <div class="w-12 h-12 mx-auto mb-3 rounded-full bg-emerald-50 flex items-center justify-center">
+        <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.58-3.22a.92.92 0 010-1.59l5.58-3.22a.92.92 0 011.16 0l5.58 3.22a.92.92 0 010 1.59l-5.58 3.22a.92.92 0 01-1.16 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12c0 5.385 4.365 9.75 9.75 9.75s9.75-4.365 9.75-9.75S17.385 2.25 12 2.25 2.25 6.615 2.25 12z"/></svg>
+      </div>
+      <h3 class="font-bold text-navy-900 mb-1">Servicenetz</h3>
+      <p class="text-slate-500 text-xs">Deutschlandweites Egret-Servicenetz für Reparaturen und Ersatzteile.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 5. FAQs ZUR MARKE                                      -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="faq" class="bg-white border-t border-slate-200">
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-navy-900 mb-8 text-center">Häufige Fragen zu Egret E-Scootern</h2>
+
+    <div class="space-y-3">
+      <!-- FAQ 1 -->
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <input type="checkbox" id="faq1" class="faq-toggle hidden peer">
+        <label for="faq1" class="faq-label flex items-center justify-between px-5 py-4 bg-slate-50 hover:bg-slate-100 transition-colors peer-checked:bg-slate-100">
+          <span class="font-semibold text-navy-900 text-sm">Haben Egret E-Scooter eine Straßenzulassung in Deutschland?</span>
+          <svg class="w-5 h-5 text-slate-400 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </label>
+        <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+          <p>Ja, alle Egret-Modelle mit dem Zusatz "eKFV" oder "20 km/h" besitzen eine Allgemeine Betriebserlaubnis (ABE) und sind für den deutschen Straßenverkehr zugelassen. Die Modelle mit 25 km/h oder 45 km/h (z. B. GTs) sind für den internationalen Markt bestimmt und in Deutschland nicht im öffentlichen Straßenverkehr erlaubt.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <input type="checkbox" id="faq2" class="faq-toggle hidden peer">
+        <label for="faq2" class="faq-label flex items-center justify-between px-5 py-4 bg-slate-50 hover:bg-slate-100 transition-colors peer-checked:bg-slate-100">
+          <span class="font-semibold text-navy-900 text-sm">Wo werden Egret E-Scooter hergestellt?</span>
+          <svg class="w-5 h-5 text-slate-400 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </label>
+        <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+          <p>Egret ist eine Hamburger Marke der Walberg Urban Electrics GmbH. Entwicklung und Design finden in Hamburg statt, die Fertigung erfolgt bei spezialisierten Partnern in Asien unter Egrets Qualitätskontrolle.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <input type="checkbox" id="faq3" class="faq-toggle hidden peer">
+        <label for="faq3" class="faq-label flex items-center justify-between px-5 py-4 bg-slate-50 hover:bg-slate-100 transition-colors peer-checked:bg-slate-100">
+          <span class="font-semibold text-navy-900 text-sm">Wie lange hält der Akku eines Egret E-Scooters?</span>
+          <svg class="w-5 h-5 text-slate-400 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </label>
+        <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+          <p>Die Akkus sind für rund 500–800 Ladezyklen ausgelegt. Bei durchschnittlicher Nutzung (3–4 Ladungen pro Woche) entspricht das einer Lebensdauer von ca. 3–5 Jahren, bevor die Kapazität merklich nachlässt.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <input type="checkbox" id="faq4" class="faq-toggle hidden peer">
+        <label for="faq4" class="faq-label flex items-center justify-between px-5 py-4 bg-slate-50 hover:bg-slate-100 transition-colors peer-checked:bg-slate-100">
+          <span class="font-semibold text-navy-900 text-sm">Gibt es Ersatzteile und Service für Egret E-Scooter?</span>
+          <svg class="w-5 h-5 text-slate-400 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </label>
+        <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+          <p>Ja, Egret bietet über ein deutschlandweites Servicenetz Ersatzteile und Reparaturen an. Über elektroroller.de erhältst du Original-Ersatzteile und Zugang zum Egret-Servicenetzwerk.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <input type="checkbox" id="faq5" class="faq-toggle hidden peer">
+        <label for="faq5" class="faq-label flex items-center justify-between px-5 py-4 bg-slate-50 hover:bg-slate-100 transition-colors peer-checked:bg-slate-100">
+          <span class="font-semibold text-navy-900 text-sm">Welcher Egret E-Scooter eignet sich für Pendler?</span>
+          <svg class="w-5 h-5 text-slate-400 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </label>
+        <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+          <p>Für Pendler mit täglichen Strecken von 5–15 km eignen sich die Modelle der X-Serie (X ultra, X prime) mit 65–90 km Reichweite und Frontfederung. Wer mehr Komfort und Langstrecke braucht, greift zur GT-Serie mit Vollfederung und bis zu 100 km Reichweite.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <input type="checkbox" id="faq6" class="faq-toggle hidden peer">
+        <label for="faq6" class="faq-label flex items-center justify-between px-5 py-4 bg-slate-50 hover:bg-slate-100 transition-colors peer-checked:bg-slate-100">
+          <span class="font-semibold text-navy-900 text-sm">Brauche ich eine Versicherung für meinen Egret E-Scooter?</span>
+          <svg class="w-5 h-5 text-slate-400 shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </label>
+        <div class="faq-answer px-5 text-sm text-slate-600 leading-relaxed">
+          <p>Ja, für alle E-Scooter mit Straßenzulassung (eKFV-Modelle, max. 20 km/h) ist in Deutschland eine Haftpflichtversicherung mit Versicherungskennzeichen Pflicht. Die Kosten liegen bei ca. 20–60 € pro Jahr je nach Anbieter und Deckung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 6. AUSFÜHRLICHER MARKEN-SEO-TEXT                        -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="seo-text" class="max-w-4xl mx-auto px-4 py-12">
+
+  <!-- Anchor nav -->
+  <nav aria-label="Inhaltsverzeichnis" class="flex flex-wrap gap-2 mb-10 text-xs">
+    <a href="#geschichte" class="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 hover:text-navy-900 transition-colors">Geschichte & Philosophie</a>
+    <a href="#modellreihen" class="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 hover:text-navy-900 transition-colors">Modellreihen</a>
+    <a href="#ratgeber" class="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 hover:text-navy-900 transition-colors">Ratgeber</a>
+  </nav>
+
+  <!-- H2: Geschichte & Philosophie -->
+  <section id="geschichte" class="mb-12">
+    <h2 class="text-xl font-bold text-navy-900 mb-4">Die Geschichte & Philosophie von Egret</h2>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+      Egret gehört zur Walberg Urban Electrics GmbH mit Sitz in Hamburg. Das Unternehmen entwickelt seit 2013 E-Scooter und zählt damit zu den Pionieren im deutschsprachigen Markt. Gründer Florian Walberg begann mit klappbaren Tretrollern, bevor er früh auf Elektroantrieb setzte.
+    </p>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+      Der Fokus liegt auf langlebigen, alltagstauglichen Fahrzeugen. Egret setzt auf große Luftreifen (10–13 Zoll), mechanische oder hydraulische Scheibenbremsen und solide Federungssysteme. Die GT-Serie bietet Vollfederung und Wechselakkus, was im E-Scooter-Segment nach wie vor ungewöhnlich ist.
+    </p>
+    <p class="text-slate-600 text-sm leading-relaxed">
+      Egret betreibt ein deutschlandweites Servicenetz mit autorisierten Werkstätten. Ersatzteile sind direkt beim Hersteller verfügbar. Das unterscheidet die Marke von vielen Importeuren, bei denen Reparaturen und Ersatzteilversorgung häufig schwierig sind.
+    </p>
+  </section>
+
+  <!-- H2: Modellreihen -->
+  <section id="modellreihen" class="mb-12">
+    <h2 class="text-xl font-bold text-navy-900 mb-4">Welche Modellreihen gibt es von Egret?</h2>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+      Egret gliedert sein Sortiment in vier Produktlinien, die sich in Ausstattung, Reichweite und Preis unterscheiden.
+    </p>
+
+    <div class="space-y-4">
+      <div class="bg-slate-50 rounded-xl p-5">
+        <h3 class="font-semibold text-navy-900 mb-1 text-sm">GT-Serie — Premium mit Vollfederung</h3>
+        <p class="text-slate-600 text-xs leading-relaxed">Die GT-Serie ist Egrets Spitzenklasse: Vollfederung vorne und hinten, 13-Zoll-Luftreifen und Wechselakkus mit bis zu 949 Wh. Der GTs erreicht 45 km/h (international), GT und GTc fahren mit 20 km/h und Straßenzulassung. Preise liegen zwischen 1.899 € und 2.199 €.</p>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-5">
+        <h3 class="font-semibold text-navy-900 mb-1 text-sm">X-Serie — Allrounder für den Alltag</h3>
+        <p class="text-slate-600 text-xs leading-relaxed">Die X-Serie richtet sich an Pendler und Alltagsfahrer. Frontfederung, 12,5-Zoll-Luftreifen und Akkus zwischen 499 und 865 Wh bieten Reichweiten von 55–90 km. Der Preisrahmen liegt aktuell bei 499 € bis 999 € (teils im Sale).</p>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-5">
+        <h3 class="font-semibold text-navy-900 mb-1 text-sm">Unit — Vollfederung und Langstrecke</h3>
+        <p class="text-slate-600 text-xs leading-relaxed">Der Egret Unit kombiniert Vollfederung mit einem 730-Wh-Akku und bis zu 100 km Reichweite. Konzipiert als Allrounder zwischen Ey!- und GT-Serie. Die eKFV-Variante (20 km/h) ist aktuell ausverkauft, die internationale Version (25 km/h) weiterhin verfügbar.</p>
+      </div>
+      <div class="bg-slate-50 rounded-xl p-5">
+        <h3 class="font-semibold text-navy-900 mb-1 text-sm">Ey!-Serie — Einsteiger</h3>
+        <p class="text-slate-600 text-xs leading-relaxed">Die Ey!-Serie ist Egrets Einstieg: leicht (18–23 kg), faltbar und ab 279 € erhältlich. Der Ey! S setzt auf einen Bosch-Motor und Apple Find My, während Ey! 2 und Ey! 6 mit Federung und größeren Akkus punkten. Gut geeignet für kurze Stadtstrecken und gelegentliche Nutzung.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- H2: Ratgeber -->
+  <section id="ratgeber" class="mb-8">
+    <h2 class="text-xl font-bold text-navy-900 mb-4">Ratgeber: So findest du das richtige Egret-Modell</h2>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+      Die Wahl hängt von drei Faktoren ab: tägliche Strecke, gewünschter Komfort und Budget.
+    </p>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+      Wer täglich pendelt (5–15 km pro Strecke), fährt mit der X-Serie gut. Der X ultra bietet die größte Reichweite, der X core das beste Preis-Leistungs-Verhältnis. Für kurze Stadtstrecken unter 5 km reicht ein Modell der Ey!-Serie, das sich zusammengeklappt auch in Bus und Bahn mitnehmen lässt.
+    </p>
+    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+      Die GT-Serie lohnt sich für Fahrer, die Komfort und Langstrecke verbinden wollen. Vollfederung und große Reifen machen sich vor allem auf schlechten Straßen und Kopfsteinpflaster bemerkbar. Der Wechselakku ist praktisch, wenn man den Scooter nicht in der Nähe einer Steckdose abstellen kann.
+    </p>
+    <p class="text-slate-600 text-sm leading-relaxed">
+      Wer mit ABE auf der Straße fahren will, achtet darauf, ein Modell mit 20 km/h und eKFV-Zulassung zu wählen. Die schnelleren Varianten (25 km/h, 45 km/h) sind in Deutschland ausschließlich auf Privatgelände erlaubt.
+    </p>
+  </section>
+
+  <!-- Internal links -->
+  <div class="flex flex-wrap gap-2 mb-8">
+    <a href="/ratgeber/e-scooter" class="inline-flex items-center gap-1.5 px-4 py-2 bg-brand-blue/5 border border-brand-blue/20 rounded-full text-brand-blue text-xs font-medium hover:bg-brand-blue/10 transition-colors">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      E-Scooter Ratgeber
+    </a>
+    <a href="/ratgeber/e-scooter-vergleich" class="inline-flex items-center gap-1.5 px-4 py-2 bg-brand-blue/5 border border-brand-blue/20 rounded-full text-brand-blue text-xs font-medium hover:bg-brand-blue/10 transition-colors">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      E-Scooter Vergleich 2026
+    </a>
+    <a href="/e-scooter" class="inline-flex items-center gap-1.5 px-4 py-2 bg-brand-blue/5 border border-brand-blue/20 rounded-full text-brand-blue text-xs font-medium hover:bg-brand-blue/10 transition-colors">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      Alle E-Scooter
+    </a>
+  </div>
+
+  <!-- Fazit -->
+  <div class="bg-navy-900 rounded-xl p-6 text-white">
+    <h3 class="font-bold mb-2">Egret bei elektroroller.de kaufen</h3>
+    <p class="text-slate-300 text-sm leading-relaxed">
+      Alle Egret-Modelle auf elektroroller.de stammen direkt vom Hersteller. Du kaufst bei einem geprüften Fachhändler mit voller Herstellergarantie, Original-Ersatzteilen und Zugang zum Egret-Servicenetz. Fragen? Unser Team hilft dir bei der Modellwahl.
+    </p>
+    <a href="/ratgeber/e-scooter" class="inline-flex items-center gap-2 mt-4 text-emerald-400 text-sm font-medium hover:text-emerald-300 transition-colors">
+      Zum E-Scooter Ratgeber
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- Verkäufer-Info (DSA)                                   -->
